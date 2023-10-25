@@ -24,15 +24,17 @@ int main(void)
 
     if (check(senha, num_elementos))
     {
-        printf("A senha eh valida!!\n");
+        printf("\n A senha eh valida!!\n");
     }
     else
     {
-        printf("A senha eh invalida!!\n");
+        printf("\n A senha eh invalida!!\n");
+        printf(" A senha precisa de letras(maiusculas e minusculas), simbolos e numeros!!\n");
     }
 
-    return 0;
+    system("pause");
 }
+
 char check(char senha[], int count)
 {
     for (int i = 0; i < count; i++)
