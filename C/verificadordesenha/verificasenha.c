@@ -6,21 +6,19 @@ char check(char senha[], int count);
 
 int main(void)
 {
-    char *senha;
+    char *senha = NULL;
     int num_elementos;
+    char c;
+    printf("Digite uma senha(quando acabar pressione ENTER): ");
 
-    do 
-    {
-    printf("Digite o tamanho da senha que deseja: ");
-    scanf("%d", &num_elementos);
-    num_elementos += 1;
-    senha = (int *)(malloc(sizeof(char) * num_elementos));
-    free(senha);
-    } while (senha == NULL);
-    
-    fflush(stdin);
-    printf("Digite uma senha: ");
-    fgets(senha, num_elementos, stdin);
+    do {
+        c = getchar();
+        senha = realloc(senha, num_elementos + 1);
+        senha[num_elementos] = c;
+        num_elementos++;
+    }while(c != '\n');
+
+    senha[num_elementos] = '\n';
 
     if (check(senha, num_elementos))
     {
@@ -32,7 +30,7 @@ int main(void)
         printf(" A senha precisa de letras(maiusculas e minusculas), simbolos e numeros!!\n");
     }
 
-    system("pause");
+    return 0;
 }
 
 char check(char senha[], int count)
