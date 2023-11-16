@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(15, 160, 15);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0px;
+
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+}
+
+.clouds {
+    animation: clouds 10s linear infinite;
+}
+
+.clouds2 {
+    position: absolute;
+    width: 450px;
+}
+
+.clouds2 {
+    animation: clouds2 10s infinite linear;
+}
+
+.gameover {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #000;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    05% {
+        bottom: 80px;
+    }
+
+    10% {
+        bottom: 100px;
+    }
+
+    15% {
+        bottom: 120px;
+    }
+
+    20% {
+        bottom: 130px;
+    }
+
+    25% {
+        bottom: 150px;
+    }
+
+    30% {
+        bottom: 160px;
+    }
+
+    35% {
+        bottom: 170px;
+    }
+
+    40% {
+        bottom: 170px;
+    }
+
+    45% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    55% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 170px;
+    }
+
+    65% {
+        bottom: 170px;
+    }
+
+    70% {
+        bottom: 160px;
+    }
+
+    75% {
+        bottom: 150px;
+    }
+
+    80% {
+        bottom: 130px;
+    }
+
+    85% {
+        bottom: 120px;
+    }
+
+    90% {
+        bottom: 100px;
+    }
+
+    95% {
+        bottom: 80px;
+    }
+
+    100% {
+        bottom: 40px;
+    }
+}
+
+@keyframes clouds {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds2 {
+    from {
+        right: -450px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
