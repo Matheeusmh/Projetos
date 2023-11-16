@@ -27,7 +27,7 @@ const loop = setInterval(() => {
     if(pipePosition < 0 && marioPosition > 110 && !counted) {
         score++; 
         counted = true;
-        scoreDisplay.textContent = `Score: ${score}`; // Atualiza o placar na tela
+        scoreDisplay.textContent = `Score: ${score}`; 
     }
     
     if(pipePosition > 120) {
